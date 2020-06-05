@@ -7,7 +7,9 @@ servo_min_max_values = {
     3: [100, 180]
 }
 
-arduino = Robot('/dev/cu.usbmodem143201', servo_min_max_values, delay_time=1.5)
+arduino_port = ''
+
+arduino = Robot(arduino_port, servo_min_max_values, delay_time=1.5)
 
 while True:
     arduino.send_command(0, 10)
